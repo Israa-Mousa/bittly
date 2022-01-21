@@ -34,8 +34,8 @@ class UrlController extends Controller
       $url=url::where('url',$request->url)->first();
     //   dd($url);
     }
-    // $allUrl=url::all();
-    return view('url.index',compact('url'));
+    $allUrl=url::all();
+    return view('url.index',compact('url','allUrl'));
     // return redirect()->route('index', ['allUrl' => $allUrl]);
     }
 
